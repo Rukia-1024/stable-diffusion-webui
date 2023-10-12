@@ -44,7 +44,7 @@ fi
 # python3 executable
 if [[ -z "${python_cmd}" ]]
 then
-    python_cmd="python3"
+    python_cmd="venv/bin/python3"
 fi
 
 # git executable
@@ -65,7 +65,7 @@ then
 fi
 
 # this script cannot be run as root by default
-can_run_as_root=0
+can_run_as_root=1
 
 # read any command line flags to the webui.sh script
 while getopts "f" flag > /dev/null 2>&1
